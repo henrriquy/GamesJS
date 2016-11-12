@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Pong</title>
+    <meta charset="utf-8" />
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <!-- <script src="js/pong_mouse.js"></script>-->
+    <script src="js/pong2.js"></script>
+    <style type="text/css">
+        #fundo {
+            background: url('pong/fundo.png');
+            width: 600px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #asteroide {
+            background: url('pong/asteroide.png');
+            position: absolute;
+            width: 51px;
+            height: 45px;
+            left: 250px;
+            top: 165px;
+        }
+
+        .paddle {
+            background: #d30000;
+            left: 30px;
+            top: 70px;
+            position: absolute;
+            width: 10px;
+            height: 80px;
+        }
+
+        #paddle2 {
+            left: 570px;
+        }
+    </style>
+</head>
+<body>
+    <audio id="som">
+        <source src="pong/som.mp3" type="audio/mpeg" />
+    </audio>
+    <audio controls="controls" autoplay loop id="musica">
+        <source src="pong/musica.mp3" type="audio/mpeg" />
+    </audio>
+    <div id="fundo">
+        <div id="asteroide"></div>
+        <div id="paddle1" class="paddle"></div>
+        <div id="paddle2" class="paddle"></div>
+    </div>
+    <div id="pontuacao">
+        <div class="pontos">Jogador 1 : <span id="jogador1">0</span></div>
+        <div class="pontos">Jogador 2 : <span id="jogador2">0</span></div>
+    </div>
+    <div id="cookies">
+        <div class="dados">Data do último jogo: <span id="p_data"></span></div>
+        <div class="dados">Última pontuação do Jogador 1: <span id="p_jogador1"></span></div>
+        <div class="dados">Última pontuação do jogador 2: <span id="p_jogador2"></span></div>
+    </div>
+</body>
+</html>

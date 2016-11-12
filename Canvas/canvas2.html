@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+        window.onload = function () {
+            var canvas = document.getElementById("meuCanvas");
+            var context = canvas.getContext("2d");
+            var imagem = new Image();
+            imagem.onload = function () {
+                context.drawImage(imagem, 0, 0);
+                context.font = "Italic 50pt Calibri";
+                context.fillStyle = "red";
+                context.fillText("Meu texto", 150, 100);
+            };
+            imagem.src = "canvas/fundo.png";
+        }
+    </script>
+</head>
+<body>
+    <h1>Canvas</h1>
+    <canvas id="meuCanvas" width="600" height="400"></canvas>
+</body>
+</html>
